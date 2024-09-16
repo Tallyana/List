@@ -1,13 +1,13 @@
-package pro.sky.listemployees;
+package pro.sky.listemployees.model;
 
 import java.util.Objects;
 
-public class EmployeesList {
+public class Employee {
 
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
 
-    public EmployeesList(String lastName, String firstName) {
+    public Employee(String lastName, String firstName) {
         this.lastName = lastName;
         this.firstName = firstName;
     }
@@ -24,7 +24,7 @@ public class EmployeesList {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        EmployeesList that = (EmployeesList) o;
+        Employee that = (Employee) o;
         return Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName);
     }
 
